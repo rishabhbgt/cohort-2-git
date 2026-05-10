@@ -1,0 +1,101 @@
+@import "button";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+//  Nesting : In SCSS, we can write selectors inside other selectors.
+                // This mimics the structure of your HTML and makes code cleaner.
+// main {
+//     height: 100%;
+//     width: 100%;
+//     background-color: black;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+
+//     section {
+//         height: 50%;
+//         width: 50%;
+//         background-color: rgb(250,250,247);
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+
+//         h1{
+//             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+//         }
+//     }
+// }
+
+// Mixins :(i) A mixin is like a reusable styles for CSS rules.
+//         (ii) Helps avoid code repetition.
+//         (iii) Can take arguments to make it dynamic.
+
+// @mixin flexCenter(){
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+// main {
+//     height: 100%;
+//     width: 100%;
+//     background-color: black;
+//     @include flexCenter();
+
+//     section {
+//         height: 50%;
+//         width: 50%;
+//         background-color: rgb(250,250,247);
+//         @include flexCenter();
+
+
+//         h1{
+//             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+//         }
+//     }
+// }
+
+// @mixin button-style($bg-color){
+//     padding: 20px 30px;
+//     background-color: $bg-color;
+//     border-radius: 7px;
+//     color: white;
+//     border: none;
+//     cursor: pointer;
+//     font-size: 18px;
+//     outline: none;
+
+// }
+
+// .blue{
+//     @include button-style(blue);
+// }
+
+// .red{
+//     @include button-style(red);
+// }
+
+// Partials and Imports : 
+
+// Partials : Small SCSS files(start with _) to split your code (e.g., _header.scss, _footer.scss).
+// Imports : @import to bring all partials into one main file.
+// Keeps project modular and easy to maintain.
+
+.blue{
+    @include button-style(blue,white,18px);
+}
+.red{
+    @include button-style(red,white,20px);
+}
+
+
+
